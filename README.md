@@ -1,2 +1,3 @@
-# flags
-command line flag parser similar to the in-built one in Go 
+# flags.zig
+
+Command line flag parser similar to the flags package in Go
