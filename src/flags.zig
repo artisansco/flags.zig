@@ -37,3 +37,15 @@ pub fn string(name: []const u8, value: []const u8, description: []const u8) []co
 
     return value;
 }
+
+pub fn boolean(name: []const u8, value: bool, description: []const u8) bool {
+    _ = description; // autofix
+    if (entries.get(name)) |found| {
+        switch (found) {
+            .flag => |v| return v,
+            else => return value,
+        }
+    }
+
+    return value;
+}
